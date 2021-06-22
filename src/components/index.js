@@ -1,0 +1,1 @@
+export { default as OluFooter } from './OluFooter'

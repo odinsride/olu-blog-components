@@ -1,8 +1,20 @@
-import Vue from 'vue'
-import App from './App.vue'
+import "tailwindcss/tailwind.css"
 
-Vue.config.productionTip = false
+import * as components from './components'
 
-new Vue({
-  render: h => h(App),
-}).$mount('#app')
+const ComponentLibrary = {
+  install(Vue, options = {}) {
+    // components
+    for (const componentName in components) {
+      const component = components[componentName]
+
+      Vue.component(component.name, component)
+    }
+  }
+}
+
+export default ComponentLibrary
+
+if (typeof window !== 'undefined' && window.Vue) {
+  window.Vue.use(ComponentLibrary)
+}
