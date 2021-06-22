@@ -1,4 +1,5 @@
 module.exports = {
+  base: "/olu-blog-components/",
   locales: {
     '/': {
       lang: 'en-US',
