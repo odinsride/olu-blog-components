@@ -3,7 +3,8 @@ module.exports = {
     content: [
       './src/**/*.html',
       './src/**/*.vue',
-      './src/**/*.jsx'
+      './src/**/*.jsx',
+      './.vuepress/**/*.vue',
     ],
     options: {
       whitelistPatternsChildren: [/^token/, /^pre/, /^code/],
